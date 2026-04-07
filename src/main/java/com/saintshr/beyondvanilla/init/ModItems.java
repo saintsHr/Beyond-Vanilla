@@ -11,4 +11,5 @@ public class ModItems {
     public static Item TITANIUM_SWORD    = null;
     public static Item TITANIUM_PICKAXE  = null;
     public static Item TITANIUM_ORE_ITEM = null;
+    public static Item TITANIUM_INGOT    = null;
 }

@@ -22,6 +22,7 @@ public class ModelRegistrationHandler {
 	public static void registerModels(ModelRegistryEvent event) {
 		registerModel(ModItems.TITANIUM_SWORD, 0);
 		registerModel(ModItems.TITANIUM_PICKAXE, 0);
+		registerModel(ModItems.TITANIUM_INGOT, 0);
 		registerModel(Item.getItemFromBlock(ModBlocks.TITANIUM_ORE_BLOCK), 0);
 	}
 

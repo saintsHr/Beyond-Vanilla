@@ -4,6 +4,7 @@ import com.saintshr.beyondvanilla.init.ModBlocks;
 import com.saintshr.beyondvanilla.init.ModItems;
 import com.saintshr.beyondvanilla.init.ModMaterials;
 import com.saintshr.beyondvanilla.init.ModNames;
+import com.saintshr.beyondvanilla.item.TitaniumIngot;
 import com.saintshr.beyondvanilla.item.TitaniumPickaxe;
 import com.saintshr.beyondvanilla.item.TitaniumSword;
 
@@ -43,6 +44,12 @@ public class RegistrationHandler {
             .setTranslationKey(BeyondVanilla.MODID + "." + ModNames.TITANIUM_PICKAXE)
             .setCreativeTab(CreativeTabs.TOOLS);
         event.getRegistry().register(ModItems.TITANIUM_PICKAXE);
+
+        ModItems.TITANIUM_INGOT = new TitaniumIngot()
+            .setRegistryName(BeyondVanilla.MODID, ModNames.TITANIUM_INGOT)
+            .setTranslationKey(BeyondVanilla.MODID + "." + ModNames.TITANIUM_INGOT)
+            .setCreativeTab(CreativeTabs.MATERIALS);
+        event.getRegistry().register(ModItems.TITANIUM_INGOT);
 
         // --- ItemBlocks ---
         ModItems.TITANIUM_ORE_ITEM = new ItemBlock(ModBlocks.TITANIUM_ORE_BLOCK)
