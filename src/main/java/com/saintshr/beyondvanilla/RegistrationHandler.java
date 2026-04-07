@@ -1,5 +1,6 @@
 package com.saintshr.beyondvanilla;
 
+import com.saintshr.beyondvanilla.item.TitaniumPickaxe;
 import com.saintshr.beyondvanilla.item.TitaniumSword;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -19,7 +20,13 @@ public class RegistrationHandler {
 			new TitaniumSword()
                 .setRegistryName(BeyondVanilla.MODID, "titanium_sword")
                 .setTranslationKey(BeyondVanilla.MODID + "." + "titanium_sword")
-                .setCreativeTab(CreativeTabs.COMBAT)
+                .setCreativeTab(CreativeTabs.COMBAT),
+
+            // --- Titanium Pickaxe ---
+			new TitaniumPickaxe()
+                .setRegistryName(BeyondVanilla.MODID, "titanium_pickaxe")
+                .setTranslationKey(BeyondVanilla.MODID + "." + "titanium_pickaxe")
+                .setCreativeTab(CreativeTabs.TOOLS),
 		};
 
 		event.getRegistry().registerAll(items);

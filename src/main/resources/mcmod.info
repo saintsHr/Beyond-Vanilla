@@ -1,19 +1,11 @@
 [
   {
-    "modid":"beyondvanilla",
-
-    "name":"Beyond Vanilla",
-
-    "description":"Beyond Vanilla is a rpg mod that aims at expanding gameplay while keeping the vanilla Minecraft feel, but also adding a bunch of content.",
-
-    "version":"v0.0.0",
-
-    "mcversion":"1.12.2",
-
-    "authorList":[
-      "saintsHr"
-    ],
-
-    "credits":"full credits to saintsHr for making this mod"
+    "modid": "beyondvanilla",
+    "name": "Beyond Vanilla",
+    "description": "Beyond Vanilla is an RPG mod that expands gameplay while keeping the vanilla Minecraft feel, adding a lot of new content.",
+    "version": "0.0.0",
+    "mcversion": "1.12.2",
+    "url": "https://github.com/saintsHr/Beyond-Vanilla",
+    "authors": ["saintsHr"]
   }
 ]

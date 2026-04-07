@@ -9,5 +9,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
     BeyondVanilla.MODID
 )
 public class ModItems {
-    public static final Item TITANIUM_SWORD = null;
+    public static final Item TITANIUM_SWORD   = null;
+    public static final Item TITANIUM_PICKAXE = null;
 }

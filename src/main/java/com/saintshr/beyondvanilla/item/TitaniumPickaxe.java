@@ -1,10 +1,10 @@
 package com.saintshr.beyondvanilla.item;
 
 import com.saintshr.beyondvanilla.init.ModMaterials;
-import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemPickaxe;
 
-public class TitaniumSword extends ItemSword {
-    public TitaniumSword() {
+public class TitaniumPickaxe extends ItemPickaxe {
+    public TitaniumPickaxe() {
         super(ModMaterials.TITANIUM);
     }
 }

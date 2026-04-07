@@ -20,6 +20,7 @@ public class ModelRegistrationHandler {
 	@SubscribeEvent
 	public static void registerModels(ModelRegistryEvent event) {
 		registerModel(ModItems.TITANIUM_SWORD, 0);
+		registerModel(ModItems.TITANIUM_PICKAXE, 0);
 	}
 
 	private static void registerModel(Item item, int meta) {

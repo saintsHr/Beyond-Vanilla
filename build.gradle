@@ -13,8 +13,8 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = 'v0.0.0'
-group = 'com.saintshr.beyondvanilla' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+version = '0.0.0'
+group = 'com.saintshr' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'beyondvanilla'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.

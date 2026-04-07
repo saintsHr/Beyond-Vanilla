@@ -8,7 +8,7 @@ public class ModMaterials {
         "TITANIUM",
         3,
         1800,
-        8.0F,
+        7.0F,
         2.5F,
         16
     );
