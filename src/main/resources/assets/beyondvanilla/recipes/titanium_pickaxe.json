@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ttt",
+		" s ",
+		" s "
+	],
+
+	"key": {
+		"t": {
+			"item": "beyondvanilla:titanium_ingot"
+		},
+		"s": {
+			"item": "minecraft:stick"
+		}
+	},
+
+	"result": {
+		"item": "beyondvanilla:titanium_pickaxe"
+	}
+}

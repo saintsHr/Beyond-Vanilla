@@ -9,7 +9,6 @@ import com.saintshr.beyondvanilla.item.TitaniumPickaxe;
 import com.saintshr.beyondvanilla.item.TitaniumSword;
 
 import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.event.RegistryEvent;
@@ -23,7 +22,7 @@ public class RegistrationHandler {
         ModBlocks.TITANIUM_ORE_BLOCK = new Block(ModMaterials.TITANIUM_ORE_MATERIAL)
             .setHardness(4.0f)
             .setResistance(7.0f)
-            .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
+            .setCreativeTab(BeyondVanilla.BEYOND_VANILLA_TAB)
             .setRegistryName(BeyondVanilla.MODID, ModNames.TITANIUM_ORE_BLOCK)
             .setTranslationKey(BeyondVanilla.MODID + "." + ModNames.TITANIUM_ORE_BLOCK);
             ModBlocks.TITANIUM_ORE_BLOCK.setHarvestLevel("pickaxe", 2);
@@ -36,26 +35,26 @@ public class RegistrationHandler {
         ModItems.TITANIUM_SWORD = new TitaniumSword()
             .setRegistryName(BeyondVanilla.MODID, ModNames.TITANIUM_SWORD)
             .setTranslationKey(BeyondVanilla.MODID + "." + ModNames.TITANIUM_SWORD)
-            .setCreativeTab(CreativeTabs.COMBAT);
+            .setCreativeTab(BeyondVanilla.BEYOND_VANILLA_TAB);
         event.getRegistry().register(ModItems.TITANIUM_SWORD);
 
         ModItems.TITANIUM_PICKAXE = new TitaniumPickaxe()
             .setRegistryName(BeyondVanilla.MODID, ModNames.TITANIUM_PICKAXE)
             .setTranslationKey(BeyondVanilla.MODID + "." + ModNames.TITANIUM_PICKAXE)
-            .setCreativeTab(CreativeTabs.TOOLS);
+            .setCreativeTab(BeyondVanilla.BEYOND_VANILLA_TAB);
         event.getRegistry().register(ModItems.TITANIUM_PICKAXE);
 
         ModItems.TITANIUM_INGOT = new TitaniumIngot()
             .setRegistryName(BeyondVanilla.MODID, ModNames.TITANIUM_INGOT)
             .setTranslationKey(BeyondVanilla.MODID + "." + ModNames.TITANIUM_INGOT)
-            .setCreativeTab(CreativeTabs.MATERIALS);
+            .setCreativeTab(BeyondVanilla.BEYOND_VANILLA_TAB);
         event.getRegistry().register(ModItems.TITANIUM_INGOT);
 
         // --- ItemBlocks ---
         ModItems.TITANIUM_ORE_ITEM = new ItemBlock(ModBlocks.TITANIUM_ORE_BLOCK)
             .setRegistryName(BeyondVanilla.MODID, ModNames.TITANIUM_ORE_BLOCK)
             .setTranslationKey(BeyondVanilla.MODID + "." + ModNames.TITANIUM_ORE_BLOCK)
-            .setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+            .setCreativeTab(BeyondVanilla.BEYOND_VANILLA_TAB);
         event.getRegistry().register(ModItems.TITANIUM_ORE_ITEM);
     }
 }

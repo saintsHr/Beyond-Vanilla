@@ -1,11 +1,14 @@
 package com.saintshr.beyondvanilla;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import org.apache.logging.log4j.Logger;
+
+import com.saintshr.beyondvanilla.recipe.ModRecipes;
 
 @Mod(
     modid   = BeyondVanilla.MODID,
@@ -19,6 +22,8 @@ public class BeyondVanilla {
 
     private static Logger logger;
 
+    public static final CreativeTabs BEYOND_VANILLA_TAB = new ModTab();
+
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
@@ -27,11 +32,12 @@ public class BeyondVanilla {
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
+        ModRecipes.initSmelting();
         logger.info("Init Done!");
     }
 
     @EventHandler
-    public void init(FMLPostInitializationEvent event) {
+    public void postInit(FMLPostInitializationEvent event) {
         logger.info("Post-Init Done!");
     }
 }
