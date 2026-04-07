@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "beyondvanilla:block/titanium_ore_block"
+    }
+}

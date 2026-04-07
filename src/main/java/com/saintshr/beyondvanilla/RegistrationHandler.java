@@ -1,34 +1,54 @@
 package com.saintshr.beyondvanilla;
 
+import com.saintshr.beyondvanilla.init.ModBlocks;
+import com.saintshr.beyondvanilla.init.ModItems;
+import com.saintshr.beyondvanilla.init.ModMaterials;
+import com.saintshr.beyondvanilla.init.ModNames;
 import com.saintshr.beyondvanilla.item.TitaniumPickaxe;
 import com.saintshr.beyondvanilla.item.TitaniumSword;
 
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraftforge.event.RegistryEvent.Register;
+import net.minecraft.item.ItemBlock;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@EventBusSubscriber(
-    modid = BeyondVanilla.MODID
-)
+@EventBusSubscriber(modid = BeyondVanilla.MODID)
 public class RegistrationHandler {
     @SubscribeEvent
-	public static void registerItems(Register<Item> event) {
-		final Item[] items = {
-            // --- Titanium Sword ---
-			new TitaniumSword()
-                .setRegistryName(BeyondVanilla.MODID, "titanium_sword")
-                .setTranslationKey(BeyondVanilla.MODID + "." + "titanium_sword")
-                .setCreativeTab(CreativeTabs.COMBAT),
+    public static void registerBlocks(RegistryEvent.Register<Block> event) {
+        ModBlocks.TITANIUM_ORE_BLOCK = new Block(ModMaterials.TITANIUM_ORE_MATERIAL)
+            .setHardness(4.0f)
+            .setResistance(7.0f)
+            .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
+            .setRegistryName(BeyondVanilla.MODID, ModNames.TITANIUM_ORE_BLOCK)
+            .setTranslationKey(BeyondVanilla.MODID + "." + ModNames.TITANIUM_ORE_BLOCK);
+            ModBlocks.TITANIUM_ORE_BLOCK.setHarvestLevel("pickaxe", 2);
+        event.getRegistry().register(ModBlocks.TITANIUM_ORE_BLOCK);
+    }
 
-            // --- Titanium Pickaxe ---
-			new TitaniumPickaxe()
-                .setRegistryName(BeyondVanilla.MODID, "titanium_pickaxe")
-                .setTranslationKey(BeyondVanilla.MODID + "." + "titanium_pickaxe")
-                .setCreativeTab(CreativeTabs.TOOLS),
-		};
+    @SubscribeEvent
+    public static void registerItems(RegistryEvent.Register<Item> event) {
+        // --- Items ---
+        ModItems.TITANIUM_SWORD = new TitaniumSword()
+            .setRegistryName(BeyondVanilla.MODID, ModNames.TITANIUM_SWORD)
+            .setTranslationKey(BeyondVanilla.MODID + "." + ModNames.TITANIUM_SWORD)
+            .setCreativeTab(CreativeTabs.COMBAT);
+        event.getRegistry().register(ModItems.TITANIUM_SWORD);
 
-		event.getRegistry().registerAll(items);
-	}
+        ModItems.TITANIUM_PICKAXE = new TitaniumPickaxe()
+            .setRegistryName(BeyondVanilla.MODID, ModNames.TITANIUM_PICKAXE)
+            .setTranslationKey(BeyondVanilla.MODID + "." + ModNames.TITANIUM_PICKAXE)
+            .setCreativeTab(CreativeTabs.TOOLS);
+        event.getRegistry().register(ModItems.TITANIUM_PICKAXE);
+
+        // --- ItemBlocks ---
+        ModItems.TITANIUM_ORE_ITEM = new ItemBlock(ModBlocks.TITANIUM_ORE_BLOCK)
+            .setRegistryName(BeyondVanilla.MODID, ModNames.TITANIUM_ORE_BLOCK)
+            .setTranslationKey(BeyondVanilla.MODID + "." + ModNames.TITANIUM_ORE_BLOCK)
+            .setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+        event.getRegistry().register(ModItems.TITANIUM_ORE_ITEM);
+    }
 }

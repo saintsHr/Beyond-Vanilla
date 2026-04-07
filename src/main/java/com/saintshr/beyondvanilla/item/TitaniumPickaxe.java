@@ -5,6 +5,6 @@ import net.minecraft.item.ItemPickaxe;
 
 public class TitaniumPickaxe extends ItemPickaxe {
     public TitaniumPickaxe() {
-        super(ModMaterials.TITANIUM);
+        super(ModMaterials.TITANIUM_TOOL_MATERIAL);
     }
 }
