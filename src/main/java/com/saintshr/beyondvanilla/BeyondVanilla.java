@@ -5,10 +5,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import org.apache.logging.log4j.Logger;
-
 import com.saintshr.beyondvanilla.recipe.ModRecipes;
+import com.saintshr.beyondvanilla.world.gen.ModWorldGen;
 
 @Mod(
     modid   = BeyondVanilla.MODID,
@@ -33,6 +34,7 @@ public class BeyondVanilla {
     @EventHandler
     public void init(FMLInitializationEvent event) {
         ModRecipes.initSmelting();
+        GameRegistry.registerWorldGenerator(new ModWorldGen(), 0);
         logger.info("Init Done!");
     }
 
